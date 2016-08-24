@@ -18,7 +18,7 @@
    
     </head>
     <body>
-         <div id="wrapper" ng-app="">
+         <div id="wrapper">
              <!--
              <div id="navbar">
                  
@@ -27,12 +27,12 @@
                  
              </div>
              -->
-             
-        <div ng-include="'templates/component/navbar.html'">
-            
-        </div>
+        <navbar-component></navbar-component>      
         <div id="page-wrapper" class="gray-bg">
+        <head-component></head-component> 
+        <!--   
         <div ng-include="'templates/component/head.html'"></div>
+        -->
             <div class="wrapper wrapper-content">
         <div class="row">
                     <div class="col-lg-3">
@@ -444,11 +444,12 @@
 
                 </div>
                 </div>
-        <div ng-include="'templates/component/footer.html'"></div>
-       </div>
-        
+        <my-component></my-component>
+        <rightsidebar-component></rightsidebar-component>
+        <!--
         <div ng-include="'templates/component/rightsidebar.html'"></div>
          </div>
+         -->
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -488,6 +489,11 @@
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
     <script src="js/angular-1.5.8.js"></script>
+    <script type="text/javascript" 
+            src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="templates/component/footer.js"></script>    
+    <script src="templates/component/head.js"></script>    
+    <script src="templates/component/navbar.js"></script> 
     <!--<script>
         $(document).ready(function(){
             $("#navbar").load('templates/component/navbar.html');

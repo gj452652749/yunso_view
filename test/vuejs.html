@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" 
+            src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+        
+    </head>
+    <body>
+        <my-component></my-component>
+        <script>
+            // 扩展 Vue 得到一个可复用的构造函数
+            Vue.component('my-component', {
+            template: '<p>A custom component!</p>'
+            })
+            new Vue({
+                el:document.body
+            })
+        </script>
+    </body>
+</html>
